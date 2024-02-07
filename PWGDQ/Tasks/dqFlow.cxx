@@ -55,7 +55,6 @@ using namespace o2::framework;
 using namespace o2::framework::expressions;
 using namespace o2::aod;
 
-
 // Declarations of various short names
 using MyEvents = soa::Join<aod::Collisions, aod::EvSels>;
 using MyEventsWithCent = soa::Join<aod::Collisions, aod::EvSels, aod::CentRun2V0Ms>;
@@ -322,7 +321,7 @@ struct DQEventQvector {
     }
 
     // Fill the VarManager::fgValues with the Q vector quantities
-    VarManager::FillQVectorFromGFW(collision, Q1vecFull, Q1vecN, Q1vecP, Q2vecFull, Q2vecN, Q2vecP, Q3vecFull, Q3vecN, Q3vecP,  Q4vecFull, Q4vecN, Q4vecP, nentriesFull, nentriesN, nentriesP);
+    VarManager::FillQVectorFromGFW(collision, Q1vecFull, Q1vecN, Q1vecP, Q2vecFull, Q2vecN, Q2vecP, Q3vecFull, Q3vecN, Q3vecP, Q4vecFull, Q4vecN, Q4vecP, nentriesFull, nentriesN, nentriesP);
 
     if (fConfigQA) {
       if ((tracks1.size() > 0) && (nentriesFull * nentriesN * nentriesP != 0.0)) {
